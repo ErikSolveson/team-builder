@@ -10,6 +10,7 @@ function App() {
     const newMember = formValue;
     const updatedMemberList = memberList.concat(newMember);
     setMemberList(updatedMemberList);
+    setFormValue(initialFormValues);
   };
 
   const changeHander = (event) => {
@@ -22,6 +23,7 @@ function App() {
     <div className="App">
       <h1>Team Members Form</h1>
       <form onSubmit={submitHandler}>
+        <b>Name: </b>
         <input
           type="text"
           name="memberName"
@@ -29,6 +31,7 @@ function App() {
           onChange={changeHander}
         />
         <br />
+        <b>Email: </b>
         <input
           type="text"
           name="memberEmail"
@@ -36,6 +39,7 @@ function App() {
           onChange={changeHander}
         />
         <br />
+        <b>Role: </b>
         <input
           type="text"
           name="memberRole"
